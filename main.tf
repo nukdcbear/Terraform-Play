@@ -26,6 +26,8 @@ locals {
     kv_name_len = "${length(local.kv_name)}"
 
     kv_short_name_len = "${length(local.kv_short_name)}"
+
+    module_cwd = "${path.cwd}"
 }
 
 
@@ -58,4 +60,9 @@ output "files_dir" {
 output "module_dir" {
   description = "Where the module lives"
   value       = "${var.module_dir}"
+}
+
+output "module_cwd" {
+  description = "What the module cwd"
+  value       = "${var.module_cwd}"
 }
