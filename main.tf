@@ -64,5 +64,5 @@ output "module_dir" {
 
 output "module_cwd" {
   description = "What the module cwd"
-  value       = "${var.module_cwd}"
+  value       = "${local.module_cwd}"
 }
